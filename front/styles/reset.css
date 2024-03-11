@@ -1,0 +1,126 @@
+/* Reset de CSS */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Margen y relleno */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl,
+dd,
+figure,
+figcaption,
+blockquote,
+fieldset,
+legend {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ajuste de texto */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Elementos de bloque */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/* Elementos de línea */
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+
+/* Lista */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Hiperenlaces */
+a {
+    text-decoration: none;
+}
+
+/* Reseteo de botón */
+button,
+input,
+optgroup,
+select,
+textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+/* Ajuste de borde */
+button {
+    overflow: visible;
+}
+
+/* Ajuste de texto */
+button,
+select {
+    text-transform: none;
+}
+
+/* Ajuste de HTML5 */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+/* Ajuste de controles */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+/* Ajuste de estilo */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/* Ajuste de formato */
+[hidden] {
+    display: none;
+}
+
+/* Ajuste de tablas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
