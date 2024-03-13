@@ -4,6 +4,8 @@
     --bg-primary: rgba(53, 0, 17, 1);
     --bg-secondary: rgba(82, 0, 26, 1);
     --bg-grey: rgba(53, 54, 54, 1);
+    --card-transform: 0;
+    --transition: transform 0.1s;
 }
 
 section {
@@ -17,6 +19,11 @@ section {
     height: auto;
 }
 
+#container_aventure {
+    position: relative;
+    transform: translateX(var(--card-transform));
+    transition: var(--transition);
+}
 
 .cards {
     padding: 15px;
@@ -55,10 +62,6 @@ section {
     border-radius: 15px;
 }
 
-.btn_right {
-    background-color: antiquewhite;
-}
-
 .arrow:hover {
-    background-color: rgba(201, 200, 200, 0.349);
+    background-color: rgba(247, 246, 246, 0.137);
 }

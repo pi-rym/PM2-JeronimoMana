@@ -13,10 +13,6 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- AJAX -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
-    defer></script>
-  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.6.0/dist/css/swiffy-slider.min.css" rel="stylesheet"
-    crossorigin="anonymous">
 
   <title>Pelipedia</title>
 </head>
@@ -45,16 +41,18 @@
     <section class="container-xl">
       <h3 style="margin-top: 20px;"> Aventura</h3>
       <div class="d-flex flex-row align-items-stretch justify-content-between">
-        <button id="btn_left" class="col arrow" onclick=moveCarrusel()><svg xmlns="http://www.w3.org/2000/svg"
-            width="30" height="30" fill="#020412" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+        <button id="btn_left12" class="col arrow"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+            fill="#020412" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
           </svg></button>
-        <div id="container_aventure" class="col">
+        <div id="container_carrusel" class=" overflow-hidden">
+          <div id="container_aventure" class="col">
+          </div>
+
         </div>
-        <button id="btn_right" class="col arrow btn_right" onclick=moveCarrusel()><svg
-            xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#020412" class="bi bi-arrow-right-short"
-            viewBox="0 0 16 16">
+        <button id="btn_right12" class="col ms-3 arrow"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+            fill="#020412" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
             <path fill-rule="evenodd"
               d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
           </svg></button>
@@ -62,14 +60,23 @@
     </section>
     <section class="container-xl">
       <h3 style="margin-top: 20px;"> Comedia</h3>
-      <div class="d-flex flex-row-reverse">
-        <button class="col">asd</button>
-        <div id="container_comedia" class="col">
+      <div class="d-flex flex-row align-items-stretch justify-content-between">
+        <button id="btn_left35" class="col arrow"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+            fill="#020412" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5" />
+          </svg></button>
+        <div id="container_carrusel" class=" overflow-hidden">
+          <div id="container_comedia" class="col">
+          </div>
+          <button id="btn_right35" class="col ms-3 arrow"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+              fill="#020412" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
+            </svg></button>
         </div>
-        <button class="col">asd</button>
-      </div>
     </section>
-    <section class="container-xl">
+    <!-- <section class="container-xl">
       <h3 style="margin-top: 20px;"> Acción</h3>
       <div class="d-flex flex-row-reverse">
         <button class="col">asd</button>
@@ -77,8 +84,8 @@
         </div>
         <button class="col">asd</button>
       </div>
-    </section>
-    <section class="container-xl">
+    </section> -->
+    <!-- <section class="container-xl">
       <h3 style="margin-top: 20px;"> Drama</h3>
       <div class="d-flex flex-row-reverse">
         <button class="col">asd</button>
@@ -140,7 +147,7 @@
         </div>
         <button class="col">asd</button>
       </div>
-    </section>
+    </section> -->
   </main>
   <footer>
     <div class="d-flex  flex-column justify-content-center align-items-center my-3">
@@ -153,7 +160,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="./scripts/index.js"></script>
+  <script src="./public/bundle.js"></script>
 </body>
 
 </html>
