@@ -1,53 +1,32 @@
-const controlCarrusel = (id, containerId) => {
+
+const controlCarrusel = (containerId, btn_leftID, btn_rightID) => {
     const container = document.getElementById(containerId);
-    const btn_left = document.getElementById(`btn_left${id}`);
-    const btn_right = document.getElementById(`btn_right${id}`);
+    const btn_left = document.getElementById(btn_leftID);
+    const btn_right = document.getElementById(btn_rightID);
     const rootStyles = document.documentElement.style;
 
-    let cardElements = document.querySelectorAll(`#${containerId} .cards`);
+    let cardElements = container.querySelectorAll('.cards');
     let isInTransition = false;
     let cardCounter = 0;
-    let initialized = true;
 
     const DIRECTION = {
         Left: "LEFT",
         Right: "RIGHT"
     };
 
-    const SECTION = [
-        { containerId: containerId, cardCounter: 0 }
-    ]
-
-    const getTransformValue = () => Number(rootStyles.getPropertyValue('--card-transform').replace("px", ""));
+    const getTransformValue = () => Number(container.style.getPropertyValue('--card-transform').replace("px", ""));
 
     const reorderCard = () => {
         const transformValue = getTransformValue();
         rootStyles.setProperty("--transition", "none");
 
-        if (cardCounter < 0) {
-            cardCounter = 0;
-        }
-
-        if (initialized) {
-            initialized = false;
-            cardCounter = 1;
-            isInTransition = false;
-            return;
-        }
-
-        if (cardCounter === 1) {
-            cardCounter--;
-            isInTransition = false;
-            return;
-        }
-
-        if (cardCounter === cardElements.length - 4) {
+        if (cardCounter === cardElements.length - 5) {
             container.appendChild(container.firstElementChild);
-            rootStyles.setProperty('--card-transform', `${transformValue + cardElements[cardCounter].scrollWidth}px`);
+            container.style.setProperty('--card-transform', `${transformValue + cardElements[cardCounter].scrollWidth}px`);
             cardCounter--;
         } else if (cardCounter === 0) {
             container.prepend(container.lastElementChild);
-            rootStyles.setProperty('--card-transform', `${transformValue - cardElements[cardCounter].scrollWidth}px`);
+            container.style.setProperty('--card-transform', `${transformValue - cardElements[cardCounter].scrollWidth}px`);
             cardCounter++;
         }
 
@@ -58,7 +37,7 @@ const controlCarrusel = (id, containerId) => {
         if (isInTransition) return;
 
         const transformValue = getTransformValue();
-        rootStyles.setProperty('--transition', 'transform 0.1s');
+        rootStyles.setProperty('--transition', 'transform 0.5s');
         isInTransition = true;
 
         if (direction === DIRECTION.Right) {
@@ -67,7 +46,7 @@ const controlCarrusel = (id, containerId) => {
             cardCounter--;
         }
 
-        rootStyles.setProperty('--card-transform', `${transformValue + (direction === DIRECTION.Left ? 1 : -1) * cardElements[0].scrollWidth}px`);
+        container.style.setProperty('--card-transform', `${transformValue + (direction === DIRECTION.Left ? 1 : -1) * cardElements[0].scrollWidth}px`);
     };
 
     btn_left.addEventListener("click", () => moveCarrusel(DIRECTION.Left));

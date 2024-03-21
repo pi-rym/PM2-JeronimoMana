@@ -1,0 +1,70 @@
+:root {
+    --bg-color: rgba(0, 0, 0, 1);
+    --color-text: rgba(217, 217, 217, 1);
+    --bg-primary: rgba(53, 0, 17, 1);
+    --bg-secondary: rgba(82, 0, 26, 1);
+    --bg-grey: rgba(53, 54, 54, 1);
+    --card-transform: 0;
+    --transition: transform 0.5s;
+}
+
+
+body {
+    background: linear-gradient(to right, black 0%, rgba(66, 1, 1, 0.788) 50%, black 100%);
+    font-family: "Roboto", sans-serif;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: rgba(10, 10, 10, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer .contact-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .contact-item {
+    margin: 0 10px;
+
+}
+
+footer .contact-item a {
+    text-decoration: none;
+    color: white;
+}
+
+h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+.cards_popular {
+    display: flex;
+    flex-direction: row;
+    max-height: 400px;
+    margin-bottom: 50px;
+
+}
+
+.container_img {
+    width: 250px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.container_img img {
+    width: 100%;
+    min-width: 250px;
+    height: auto;
+    border-radius: 15px;
+
+}
+
+.container_data {
+    margin-left: 50px;
+}
