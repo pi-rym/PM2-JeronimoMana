@@ -49,7 +49,7 @@ const posterElement = () => {
 
 const processMovies = async (genreId, containerId) => {
     try {
-        const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=633b5d2151e75abd9ef188f9ef2de1c0&language=es&with_genres=${genreId}`);
+        const response = await axios.get(`http://localhost:3000/movies?genreid=${genreId}`);
         const data = response.data;
         const movies = data.results;
         movies.forEach(film => {
